@@ -1,4 +1,8 @@
-// import Constructor from './../src/javascript.js';
+import { countChangeRecursively } from './../src/js/coincounter.js';
 
-// describe('Constructor', () => {}
-// test() => {}
+describe('countChangeRecursively', () => {
+  test('it should return NaN if a special character is passed in', () => {
+    const userInput = countChangeRecursively("!");
+    expect(userInput).toEqual("Please enter a valid number.");
+  });
+});
