@@ -6,7 +6,7 @@ describe('countChangeRecursively', () => {
     expect(userInput).toEqual("Please enter a valid number.");
   });
 
-  test('it should return all coin property values as 0 if 0 is passed in', () => {
+  test('it should return NaN if 0 is passed in', () => {
     const userInput = countChangeRecursively(0);
     expect(userInput).toEqual({
       quarters: 0,
