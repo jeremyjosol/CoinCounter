@@ -45,4 +45,14 @@ describe('countChangeRecursively', () => {
       pennies: 0
     });
   });
+
+  test('quarters should return 2, dimes should return 1, nickels should return 1, & pennies should return 3 if 0.68 is passed in', () => {
+    const userInput = countChangeRecursively(0.68);
+    expect(userInput).toEqual({
+      quarters: 2,
+      dimes: 1,
+      nickels: 1,
+      pennies: 3
+    });
+  });
 });
