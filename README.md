@@ -1,52 +1,39 @@
-# Project Title
+# Coin Counter
 
 ## Contributors
 _Jeremy Josol_
 
 ## About
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+Coin Counter is a simple JavaScript project designed primarily for practicing and understanding key functional programming concepts such as recursion and closures. Coin Counter allows you to convert a given amount of money into the minimum number of quarters, dimes, nickels, and pennies.
 
 ## Technologies Used
 
 * _Github_
 * _VSCode_
-* _HTML_
-* _CSS_
-* _Bootstrap_
 * _Javascript_
 * _Node.js v16.13.1_
 * _npm v8.1.2_
-* _api_
 
 ### Prerequisuites
 > _Your computer or codespace should use **Node.js version 16** or greater. For more information, see_ [Node.js](https://nodejs.org/en).
 
 ## Application Setup
 
-1. Clone the [repository](https://github.com/jeremyjosol/project_name.git) by either copying the link or entering the command in your terminal:
+1. Clone the [repository](https://github.com/jeremyjosol/coin-counter.git) by either copying the link or entering the command in your terminal:
     ```
-     git clone enter_link_here
+     git clone https://github.com/jeremyjosol/coin-counter.git
     ```
-2. After successfully cloning down the repository, navigate to the **'projectname_project'** directory, if the file is located in your desktop, enter the following command:
+2. After successfully cloning down the repository, navigate to the **'coin-counter'** directory, if the file is located in your desktop, enter the following command:
       ```
-       cd projectname_project
-3. In the root directory of `projectname_project`, enter the following command `touch .env`. This file is where you will store your API key.
+       cd coin-counter
 
-4. If you don't already have an API key for [apiwebsite](apiwebsite), create an account to have one generated. This is required in order for the function to call on the API in this project.
-
-5. After opening up your codespace, locate the .env file. Within the .env file, enter the following code: 
-      ```
-        API_KEY=yourAPIkey
-      ```  
-    > _.env will already be located in the .gitignore file to protect this sensitive information._
-
-6. Before you can use or deploy the project, make sure to install its dependencies. Run the following command in your terminal:
+3. Before you can use or deploy the project, make sure to install its dependencies. Run the following command in your terminal:
 
     `$ npm install`
 
     > _This command will read the **package.json** file and install all the required packages_.
 
-7. Once its dependencies are installed, you're ready to perform these available options:
+4. Once its dependencies are installed, you're ready to perform these available options:
     
     - To build the project:
     
@@ -72,11 +59,11 @@ _Jeremy Josol_
 
       > _This will launch a local server for testing and development purposes_.
 
-You should now be set up to use, develop, and test **Project Name**. If you encounter any issues or have questions, feel free to reach out or refer to the project's documentation. Alternatively, if you'd like to view the project without setting up a local environment, you can access it on [Github Pages](https://jeremyjosol.github.io/aug252023_project/). 
+You should now be set up to use, develop, and test **Coin Counter**. If you encounter any issues or have questions, feel free to reach out or refer to the project's documentation. 
 
 
 ## Known Bugs
-Users may experience issues with API data output, if relevant issues occur, trash the `node_modules` and `package-lock.json` files and repeat step 6 in Application Setup.
+No known bugs.
 
 ## MIT License
 Copyright (c) 2023 Jeremy Josol
