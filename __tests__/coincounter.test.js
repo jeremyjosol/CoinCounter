@@ -6,6 +6,11 @@ describe('countChangeRecursively', () => {
     expect(userInput).toEqual("Please enter a valid number.");
   });
 
+  test('it should return NaN if a number < 0 is passed in', () => {
+    const userInput = countChangeRecursively(-1);
+    expect(userInput).toEqual("Please enter a valid number.");
+  });
+
   test('it should return NaN if 0 is passed in', () => {
     const userInput = countChangeRecursively(0);
     expect(userInput).toEqual({
