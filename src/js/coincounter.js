@@ -2,10 +2,10 @@
 
 export function countChangeRecursively(change) {
   if (isNaN(change)) {
-    return "Please enter a valid number.";
+  return "Please enter a valid number.";
   
   } else if (change === 0) {
-    return {
+  return {
       quarters: 0,
       dimes: 0,
       nickels: 0,
@@ -15,11 +15,21 @@ export function countChangeRecursively(change) {
   const quarters = Math.floor(change / 0.25);
   const remainingChange = change - quarters * 0.25;
   const totalChange = countChangeRecursively(remainingChange)
+  return {
+      quarters: quarters + totalChange.quarters,
+      dimes: totalChange.dimes,
+      nickels: totalChange.nickels,
+      pennies: totalChange.pennies
+    };
+  } else if (change >= 0.10) {
+    const dimes = Math.floor(change / 0.10);
+    const remainingChange = change - dimes * 0.10;
+    const totalChange = countChangeRecursively(remainingChange)
     return {
-    quarters: quarters + totalChange.quarters,
-    dimes: totalChange.dimes,
-    nickels: totalChange.nickels,
-    pennies: totalChange.pennies
-  };
+      quarters: totalChange.quarters,
+      dimes: dimes + totalChange.dimes,
+      nickels: totalChange.nickels,
+      pennies: totalChange.pennies
+    };
   }
 }
