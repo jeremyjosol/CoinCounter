@@ -36,13 +36,13 @@ describe('countChangeRecursively', () => {
     });
   });
 
-  // test('quarters should return 2 & dimes should return 1 if 0.60 is passed in', () => {
-  //   const userInput = countChangeRecursively(0.60);
-  //   expect(userInput).toEqual({
-  //     quarters: 2,
-  //     dimes: 1,
-  //     nickels: 0,
-  //     pennies: 0
-  //   });
-  // });
+  test('quarters should return 2 & dimes should return 1 if 0.60 is passed in', () => {
+    const userInput = countChangeRecursively(0.60);
+    expect(userInput).toEqual({
+      quarters: 2,
+      dimes: 1,
+      nickels: 0,
+      pennies: 0
+    });
+  });
 });

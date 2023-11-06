@@ -1,9 +1,11 @@
 // recursive solution
 
 export function countChangeRecursively(change) {
-  if (isNaN(change)) {
+  if (!Number(change)) {
   return "Please enter a valid number.";
   }
+
+  change = parseFloat(change.toFixed(2));
 
   const coinValues = [0.25, 0.10, 0.05, 0.01];
   const coinNames = ['quarters', 'dimes', 'nickels', 'pennies'];
@@ -25,16 +27,13 @@ export function countChangeRecursively(change) {
     if (change >= coinValue) {
       const count = Math.floor(change / coinValue);
       coinCount[coinName] = count;
-      const remainingChange = (change % coinValue);
+      const remainingChange = (change - count * coinValue);
       const totalChange = countChangeRecursively(remainingChange);
-    
-      const result = {
-        quarters: coinCount.quarters + totalChange.quarters,
-        dimes: coinCount.dimes + totalChange.dimes,
-        nickels: coinCount.nickels + totalChange.nickels,
-        pennies: coinCount.pennies + totalChange.pennies,
-      };
-      return result;
+      coinCount.quarters + totalChange.quarters;
+      coinCount.dimes + totalChange.dimes;
+      coinCount.nickels + totalChange.nickels;
+      coinCount.pennies + totalChange.pennies;
     } 
   }
+  return coinCount;
 }
