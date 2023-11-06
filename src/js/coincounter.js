@@ -3,33 +3,38 @@
 export function countChangeRecursively(change) {
   if (isNaN(change)) {
   return "Please enter a valid number.";
+  }
+
+  const coinValues = [0.25, 0.10, 0.05, 0.01];
+  const coinNames = ['quarters', 'dimes', 'nickels', 'pennies'];
+  const coinCount = {
+    quarters: 0,
+    dimes: 0,
+    nickels: 0,
+    pennies: 0,
+  };
   
-  } else if (change === 0) {
-  return {
-      quarters: 0,
-      dimes: 0,
-      nickels: 0,
-      pennies: 0
-    };
-  } else if (change >= 0.25) {
-  const quarters = Math.floor(change / 0.25);
-  const remainingChange = change - quarters * 0.25;
-  const totalChange = countChangeRecursively(remainingChange)
-  return {
-      quarters: quarters + totalChange.quarters,
-      dimes: totalChange.dimes,
-      nickels: totalChange.nickels,
-      pennies: totalChange.pennies
-    };
-  } else if (change >= 0.10) {
-    const dimes = Math.floor(change / 0.10);
-    const remainingChange = change - dimes * 0.10;
-    const totalChange = countChangeRecursively(remainingChange)
-    return {
-      quarters: totalChange.quarters,
-      dimes: dimes + totalChange.dimes,
-      nickels: totalChange.nickels,
-      pennies: totalChange.pennies
-    };
+  if (change === 0) {
+    return coinCount;
+  }
+  
+  for (let i = 0; i < coinValues.length; i++) {
+    const coinValue = coinValues[i];
+    const coinName = coinNames[i];
+  
+    if (change >= coinValue) {
+      const count = Math.floor(change / coinValue);
+      coinCount[coinName] = count;
+      const remainingChange = (change % coinValue);
+      const totalChange = countChangeRecursively(remainingChange);
+    
+      const result = {
+        quarters: coinCount.quarters + totalChange.quarters,
+        dimes: coinCount.dimes + totalChange.dimes,
+        nickels: coinCount.nickels + totalChange.nickels,
+        pennies: coinCount.pennies + totalChange.pennies,
+      };
+      return result;
+    } 
   }
 }
