@@ -21,7 +21,7 @@ Coin Counter is a simple JavaScript project designed primarily for practicing an
 
 1. Clone the [repository](https://github.com/jeremyjosol/coin-counter.git) by either copying the link or entering the command in your terminal:
     ```
-     git clone https://github.com/jeremyjosol/coin-counter.git
+     $ git clone https://github.com/jeremyjosol/coin-counter.git
     ```
 2. After successfully cloning down the repository, navigate to the **'coin-counter'** directory, if the file is located in your desktop, enter the following command:
       ```
